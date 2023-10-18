@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Contact Detail</h1>
+  <p><strong>Name:</strong> {{ contact }}</p>
+  <p><strong>Last Name:</strong> {{ contact.last_name }}</p>
+  <p><strong>First Name:</strong> {{ contact.first_name }}</p>
+  <p><strong>Middle Name:</strong> {{ contact.middle_name }}</p>
+  <p><strong>Phone Number:</strong> {{ contact.phone_number }}</p>
+  <p><strong>Email:</strong> {{ contact.email }}</p>
+  <p><strong>Date of Birth:</strong> {{ contact.date_of_birth }}</p>
+  {% if contact.photo %}
+    <p><img src="{{ contact.photo.url }}" alt="Contact Photo"></p>
+  {% endif %}
+{% endblock %}
